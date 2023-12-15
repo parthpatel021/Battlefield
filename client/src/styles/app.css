@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,16 @@ body {
     background-image: linear-gradient(rgba(0, 12, 19, .6), rgba(0, 12, 19, .6)), url(https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/6038f70ef0141a2f22d50f58_menu__background.jpg);
     background-position: 0 0, 50%;
     background-size: auto, cover;
+    color: #333;
+    cursor: none;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
 
+a {
+    cursor: none;
+    text-decoration: underline;
 }
 
 .container {

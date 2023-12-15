@@ -13,7 +13,7 @@ export const App = () => {
             <div className='container'>
                 <div className='bf4__bg' />
                 <img src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/6038fcc47b02ee10043f39c3_soldier__BFemblem.png' className='soldier__bfemblem'/>
-                <B4Level />
+                <B4Level /> 
                 <Sidemenu />
                 <Routes>
                     <Route path='/' element={<Battlefield />} />
