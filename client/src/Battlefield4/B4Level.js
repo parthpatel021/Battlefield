@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import "../css/app.css"
+import "../styles/app.css"
 
 const B4Level = () => {
     return (

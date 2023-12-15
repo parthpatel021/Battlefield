@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import "./css/app.css"
+import "./styles/app.css"
 import { Route, Routes } from 'react-router-dom';
 import Sidemenu from './Components/SideMenu';
 import Invite from './Battlefield4/Invite';
