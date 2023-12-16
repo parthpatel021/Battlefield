@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-/* Nav-bar */
+/*---------------- Nav-bar ----------------------------------------------------------------*/
 .tab-container {
     position: relative;
     display: flex;
@@ -60,7 +60,7 @@
     right: 0%;
 }
 
-/* Main-content */
+/*---------------------------- Main-content ------------------------------------------------------*/
 .b4-content{
     display: block;
     position: relative;
@@ -113,7 +113,7 @@
     left: 4vh;
 }
 
-/* Level -info */
+/*--- Level-info ------------------------------------------------------------------------------ */
 .soldier__info {
     justify-content: flex-start;
     align-items: center;
@@ -194,4 +194,219 @@
     font-size: 1.4vh;
     font-weight: 500;
     line-height: 1.8vh;
+}
+
+/* ------------------- Soldier-Stats ---------------------------------------------------------- */
+.soldier__select {
+    display: flex;
+}
+.soldier__menu-w {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    margin-right: 6vh;
+}
+.soldier__menu {
+    width: 30vh;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.7vh;
+    padding-right: 1.7vh;
+    text-decoration: none;
+    display: flex;
+}
+
+.soldier__menu {
+    width: 30vh;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.7vh;
+    padding-right: 1.7vh;
+    text-decoration: none;
+    display: flex;
+}
+.soldier__menu-h {
+    color: #fff;
+    letter-spacing: .07vh;
+    text-transform: uppercase;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+    text-decoration: none;
+}
+.soldier__menu-stats {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 1vh;
+    margin-bottom: 1.2vh;
+    display: flex;
+}
+.soldier__menu-stats-h {
+    color: #fff;
+    text-align: right;
+    letter-spacing: .08vh;
+    margin-bottom: 0.3vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.25vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+    text-decoration: none;
+}
+.soldier__menu-stats-bar {
+    position: relative;
+}
+.soldier__stats-bar-orange {
+    z-index: 2;
+    width: 4.5vh;
+    height: 4px;
+    background-color: #ee930e;
+    position: absolute;
+}
+.soldier__menu-stats-bar-black {
+    z-index: 1;
+    width: 7vh;
+    height: 4px;
+    background-color: rgba(16, 16, 16, .5);
+    position: relative;
+}
+
+/* ------------------- Game-Stats -------------------------------------------------------------------------------------------*/
+.soldier__stats-w {
+    align-items: flex-start;
+    margin-bottom: 5vh;
+    display: flex;
+}
+.soldier__stats {
+    margin-right: 9vh;
+}
+.soldier__stats-h {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.5vh;
+    font-weight: 500;
+    line-height: 1.8vh;
+}
+.soldier__stats-percent {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Rajdhani, sans-serif;
+    font-size: 2.8vh;
+    font-weight: 700;
+    line-height: 3.5vh;
+}
+
+/*-------- top-stats ---------*/
+.soldier__top-stats-w {
+    grid-column-gap: 6px;
+    grid-row-gap: 8px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+.soldier__top-stats {
+    width: 24vh;
+    height: 15vh;
+    background-color: rgba(16, 16, 16, .5);
+    padding: 1vh;
+    text-decoration: none;
+    position: relative;
+    
+    max-width: 100%;
+    display: inline-block;
+}
+.soldier__top-stats-h {
+    color: rgba(255, 255, 255, .7);
+    letter-spacing: .15vh;
+    text-transform: uppercase;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.3vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+}
+.soldier__top-stats-info {
+    position: absolute;
+    bottom: 1vh;
+    left: 1vh;
+}
+.soldier__top-stats-weapon {
+    color: #fff;
+    letter-spacing: .05vh;
+    text-transform: capitalize;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+}
+.soldier__top-stats-weapon-s {
+    color: rgba(255, 255, 255, .5);
+    letter-spacing: .05vh;
+    text-transform: none;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.3vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+}
+.soldier__tank-black {
+    z-index: 2;
+    height: 8vh;
+    display: none;
+    position: absolute;
+    left: 10%;
+}
+.soldier__tank-white {
+    z-index: 1;
+    height: 8vh;
+    position: absolute;
+    left: 10%;
+}
+.soldier__acw-black {
+    z-index: 2;
+    height: 8vh;
+    display: none;
+    position: absolute;
+}
+.soldier__acw-white {
+    z-index: 1;
+    height: 8vh;
+    margin-left: 0;
+    position: absolute;
+}
+.soldier__engineer-black {
+    z-index: 2;
+    height: 6vh;
+    margin-left: 28%;
+    display: none;
+    position: absolute;
+    top: 25%;
+    bottom: 35%;
+    left: 10%;
+}
+.soldier__engineer-white {
+    z-index: 1;
+    height: 6vh;
+    margin-left: 30%;
+    position: absolute;
+    top: 25%;
+    bottom: 35%;
+    left: 10%;
+    right: 0%;
+}
+.soldier__m9-black {
+    z-index: 2;
+    height: 8vh;
+    display: none;
+    position: absolute;
+    left: 25%;
+}
+.soldier__m9-white {
+    z-index: 1;
+    height: 8vh;
+    position: absolute;
+    left: 25%;
 }
