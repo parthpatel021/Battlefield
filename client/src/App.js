@@ -4,8 +4,8 @@ import "./styles/app.css"
 import { Route, Routes } from 'react-router-dom';
 import Sidemenu from './Components/SideMenu';
 import Invite from './Battlefield4/Invite';
-import Battlefield from './Battlefield4/Battlefield';
 import B4Level from './Battlefield4/B4Level';
+import BattlefieldPage from './Battlefield4/BattlefieldPage';
 
 export const App = () => {
     return (
@@ -16,7 +16,7 @@ export const App = () => {
                 <B4Level /> 
                 <Sidemenu />
                 <Routes>
-                    <Route path='/' element={<Battlefield />} />
+                    <Route path='/' element={<BattlefieldPage />} />
                 </Routes>
                 <Invite />
             </div>

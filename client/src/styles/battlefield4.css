@@ -1,0 +1,197 @@
+/* Battlefield4 soldier Page */
+.battlefield_menu {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+    padding-left: 12vh;
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    overflow: hidden;
+}
+
+/* Nav-bar */
+.tab-container {
+    position: relative;
+    display: flex;
+}
+
+.menu-tab {
+    opacity: .8;
+    color: #fff;
+    text-align: left;
+    letter-spacing: .1vh;
+    text-transform: uppercase;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 2vh;
+    padding: 0;
+    font-family: Rajdhani, sans-serif;
+    font-size: 2.2vh;
+    font-weight: 500;
+    line-height: 3.5vh;
+    text-decoration: none;
+    transition: text-shadow .1s cubic-bezier(.455, .03, .515, .955);
+}
+
+.menu-tab:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, .8);
+}
+
+.menu-tab.w--current {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #fff;
+    font-weight: 700;
+}
+
+.menu-bar {
+    z-index: 1;
+    width: 70vw;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .15) 73%, rgba(255, 255, 255, 0));
+    position: absolute;
+    top: 7.6vh;
+    bottom: auto;
+    left: 12vh;
+    right: 0%;
+}
+
+/* Main-content */
+.b4-content{
+    display: block;
+    position: relative;
+    padding-top: 3.5vh;
+    overflow: visible;
+
+    transform-style: preserve-3d;
+    transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transition: opacity 300ms linear 0s;
+}
+
+.soldier__content {
+    z-index: 2;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 6vh;
+    display: flex;
+    position: relative;
+}
+
+.soldier__look {
+    width: 33vh;
+    flex: none;
+    position: relative;
+    top: -4vh;
+}
+
+.soldier__dogtag {
+    position: absolute;
+    bottom: 10vh;
+}
+
+.soldier__dogtag-left {
+    z-index: 2;
+    max-width: 80%;
+    position: relative;
+}
+
+.soldier__dogtag-right {
+    z-index: 1;
+    max-width: 80%;
+    position: relative;
+    left: -88px;
+}
+
+.soldier__pic{
+    width: 33vh;
+    position: relative;
+    left: 4vh;
+}
+
+/* Level -info */
+.soldier__info {
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3vh;
+    display: flex;
+}
+.soldier__level {
+    width: 8vh;
+    height: 8vh;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vh;
+    display: flex;
+    position: relative;
+}
+
+.soldier__level-bar {
+    width: 8vh;
+    height: 8vh;
+    border: 2px solid #ee930e;
+    border-style: solid solid none none;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+    margin-left: -1px;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.soldier__level-icon {
+    width: 7vh;
+    height: 7vh;
+}   
+
+.soldier__level-info-h {
+    color: #fff;
+    margin-bottom: 1vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 2.7vh;
+    font-weight: 700;
+    line-height: 3.5vh;
+}
+.soldier__level-stats {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+.soldier__level-no {
+    width: 6vh;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin-right: 1.5vh;
+}
+.soldier__level-text {
+    color: #fff;
+    text-align: center;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 500;
+    line-height: 1.8vh;
+}
+.soldier__level-current {
+    color: #fff;
+    margin-right: 0.5vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 500;
+    line-height: 1.8vh;
+}
+.soldier__level-estimate {
+    color: rgba(255, 255, 255, .5);
+    margin-right: 0.5vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 500;
+    line-height: 1.8vh;
+}
