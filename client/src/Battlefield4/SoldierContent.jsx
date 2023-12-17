@@ -7,7 +7,7 @@ const SoldierMenuBlock = (props) => {
     const { name, stats, total, link } = props.menuBlockInfo;
     const [hover, setHover] = useState(false);
     return (
-        <a href={`${name === 'battlePacks'}`} className='soldier__menu'
+        <a href={`${name === 'battlePacks' ? link : '/'}`} className='soldier__menu'
             style={{ backgroundColor: `${hover ? 'rgb(255,255,255)' : 'rgba(0,0,0,0)'}` }}
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}

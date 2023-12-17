@@ -15,6 +15,7 @@
     left: auto;
     right: 0%;
     transform: translate(19vh);
+    transition-duration: 400ms;
 }
 
 .invite__line {

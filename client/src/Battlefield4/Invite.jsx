@@ -4,6 +4,7 @@ import "../styles/invite.css"
 
 const Invite = () => {
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const [hoverId, setHoverId] = useState(0);
     return (
         <div className='invite'
             style={{
@@ -26,11 +27,15 @@ const Invite = () => {
                 </div>
 
                 {/* Join - Invite */}
-                <div className='invite__join-w'>
+                <div className='invite__join-w' 
+                    onMouseOver={() => setHoverId(1)} 
+                    onMouseOut={() => setHoverId(0)}
+                    style={{backgroundColor: `${hoverId === 1 ? 'rgb(255,255,255)' : 'rgba(0,0,0,0)'}`}}
+                >
                     <img 
                         src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601ab1596100550691c84f76_home__join-black.svg' 
                         className='invite__join-icon invite__join-icon--black'
-                        style={{display: `none`}}
+                        style={{display: `${hoverId === 1 ? 'block' : 'none'}`}}
                     />
                     <img 
                         src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601ab158769fa828e95f98df_home__join-default.svg' 
@@ -38,7 +43,7 @@ const Invite = () => {
                     />
                     <div 
                         className='invite__join-h' 
-                        style={{opacity: `${isMouseOver ? '1' : '0'}`, color: `rgb(255, 255, 255)`}}
+                        style={{opacity: `${isMouseOver ? '1' : '0'}`, color: `${hoverId===1 ? 'rgb(16,16,16)':'rgb(255, 255, 255)'}`}}
                     >
                         Squad Join
                     </div>
@@ -59,7 +64,10 @@ const Invite = () => {
                 </div>
 
                 {/* Online-Friends */}
-                <div className='invite__online-friend'>
+                <div className='invite__online-friend'  
+                    onMouseOver={() => setHoverId(2)}  
+                    onMouseOut={() => setHoverId(0)}
+                >
                     <div className='invite__friend-picture-w'>
                         <div className='invite__online-bar' />
                         <img 
@@ -70,12 +78,12 @@ const Invite = () => {
 
                     <div 
                         className='invite__friend-info'
-                        style={{opacity: `${isMouseOver ? '1' : '0'}`, backgroundColor: `rgba(0, 0, 0, 0)`}}
+                        style={{opacity: `${isMouseOver ? '1' : '0'}`, backgroundColor: `${hoverId===2 ? 'rgb(255,255,255)' :'rgba(0, 0, 0, 0)'}`}}
                     >
-                        <div className='invite__friend-name' style={{color: `rgb(255, 255, 255)`}}>
+                        <div className='invite__friend-name' style={{color: `${hoverId===2 ? 'rgb(16,16,16)':'rgb(255, 255, 255)'}`}}>
                             MaryJane
                         </div>
-                        <div className='invite__friend-status' style={{color:`rgba(255,255,255,0.7)`}}>
+                        <div className='invite__friend-status' style={{color:`${hoverId===2 ? 'rgba(16,16,16,0.6)': 'rgba(255,255,255,0.7)'}`}}>
                             Online
                         </div>
                     </div>
@@ -94,7 +102,11 @@ const Invite = () => {
                         offline
                     </div>
                 </div>
-                <div className='invite__offline-friend' style={{opacity : `0.4`}}>
+                <div className='invite__offline-friend' 
+                    onMouseOver={() => setHoverId(3)}  
+                    onMouseOut={() => setHoverId(0)}
+                    style={{opacity : `${hoverId===3 ? '1':'0.4'}`}}
+                >
                     <div className='invite__friend-picture-w'>
                         <div className='invite__offline-bar' />
                         <img 
@@ -104,12 +116,16 @@ const Invite = () => {
                     </div>
                     <div 
                         className='invite__friend-info'
-                        style={{opacity: `${isMouseOver?'1':'0'}`, backgroundColor:`rgba(0, 0, 0, 0)`}}
+                        style={{opacity: `${isMouseOver?'1':'0'}`, backgroundColor:`${hoverId===3 ? 'rgb(255,255,255)' :'rgba(0, 0, 0, 0)'}`}}
                     >  
-                        <div className='invite__friend-name' style={{color: `rgb(255, 255, 255)`}}>
+                        <div className='invite__friend-name' 
+                            style={{color: `${hoverId===3 ? 'rgb(16,16,16)':'rgb(255, 255, 255)'}`}}
+                        >
                             420
                         </div>
-                        <div className='invite__friend-status' style={{color:`rgba(255,255,255,0.7)`}}>
+                        <div className='invite__friend-status' 
+                            style={{color:`${hoverId===3 ? 'rgba(16,16,16,0.6)': 'rgba(255,255,255,0.7)'}`}}
+                        >
                             offline
                         </div>
 
