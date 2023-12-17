@@ -29,7 +29,7 @@ const Sidemenu = () => {
     return (
         <div className='side-menu__bar'>
             <div className='side-menu__tabs'>
-                {sidemenuData.map((d, index) => <SideMenuTab sideMenuTabInfo={d} />)}
+                {sidemenuData.map((d, index) => <SideMenuTab key={index} sideMenuTabInfo={d} />)}
             </div>
         </div>
     )

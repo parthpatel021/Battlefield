@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../styles/battlefield4.css"
+import axios from "axios";
 import soldierInfo from '../assets/SoldierInfo';
 
 const SoldierMenuBlock = (props) => {
@@ -31,7 +32,8 @@ const SoldierMenuBlock = (props) => {
     );
 }
 
-const SoldierStats = () => {
+const SoldierStats = (props) => {
+    const soldierInfo = props.soldierInfo;
     const { winsPercentagw, scorePerMin, killsPerMin } = soldierInfo?.stats;
     const tops = soldierInfo?.tops;
     return (
@@ -89,6 +91,23 @@ const SoldierTopStatsComponent = (props) => {
 }
 
 const SoldierContent = () => {
+    // const [soldierInfo,setSoldierInfo] = useState({});
+
+    const getSoldierInfo = async (req,res) => {
+        try {
+            const {data} = await axios.get(`${process.env.REACT_APP_BASE_URL}/b4/soldier-info`);
+            const info = data.soldierInfo;
+            console.log(info[0].level);  
+            // setSoldierInfo(info);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    useEffect(() => {
+        getSoldierInfo();
+    },[]);
+
     const { levelName, levelNumber, currentRating, rankUpRating, estimatedRankUp } = soldierInfo.level;
     return (
         <div className='soldier__content-w'>
@@ -98,7 +117,7 @@ const SoldierContent = () => {
                 <div className='soldier__level'>
                     <div className='soldier__level-bar'></div>
                     <img
-                        src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601ab1b899e303b6e902c5e4_home__level-icon.png' alt
+                        src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/601ab1b899e303b6e902c5e4_home__level-icon.png'
                         className='soldier__level-icon'
                     />
                 </div>
@@ -133,7 +152,7 @@ const SoldierContent = () => {
                 </div>
 
                 {/* Soldier Stats & tops */}
-                <SoldierStats />
+                <SoldierStats soldierInfo={soldierInfo} />
             </div>
         </div>
     );
