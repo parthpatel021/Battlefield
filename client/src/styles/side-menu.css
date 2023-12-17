@@ -34,7 +34,7 @@
     width: 6.3vh;
     height: 4.3vh;
     opacity: .5;
-    cursor: none;
+    cursor: default;
     background-color: rgba(0, 0, 0, 0);
     border-left: 3px solid rgba(0, 0, 0, 0);
     justify-content: flex-start;
@@ -43,6 +43,12 @@
     padding: 0;
     transition: opacity .1s cubic-bezier(.455, .03, .515, .955);
     display: flex;
+}
+
+.side-menu__game.w--current {
+    opacity: .8;
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 3px solid #ee930e;
 }
 
 .side-menu__popup {
@@ -66,3 +72,82 @@
     line-height: 1.5vh;
     text-decoration: none;
 }
+
+
+
+.side-menu__feed {
+    width: 6vh;
+    height: 3.5vh;
+    opacity: .5;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: 2vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2vh;
+    padding: 0;
+    text-decoration: none;
+    transition: opacity .1s cubic-bezier(.455, .03, .515, .955);
+    display: flex;
+}
+
+.side-menu__help {
+    width: 6vh;
+    height: 3.2vh;
+    opacity: .5;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: 3vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 34vh;
+    padding: 0;
+    text-decoration: none;
+    transition: opacity .1s cubic-bezier(.455, .03, .515, .955);
+    display: flex;
+}
+
+.side-menu__quit {
+    width: 6vh;
+    height: 3vh;
+    opacity: .5;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: 3vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.5vh;
+    padding: 0;
+    text-decoration: none;
+    transition: opacity .1s cubic-bezier(.455, .03, .515, .955);
+    display: flex;
+}
+
+/* .side-menu__quit {
+    z-index: 4;
+    width: 1.4vh;
+    height: 1.4vh;
+    opacity: .5;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 94.5vh;
+    margin-left: 3vh;
+    padding: 1vh;
+    text-decoration: none;
+    transition: opacity .1s cubic-bezier(.455, .03, .515, .955);
+    display: flex;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+} */
