@@ -113,6 +113,15 @@
     left: 4vh;
 }
 
+.loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    height: 30vh;
+}
+
 /*--- Level-info ------------------------------------------------------------------------------ */
 .soldier__info {
     justify-content: flex-start;

@@ -1,17 +1,25 @@
 import React, { useState } from 'react'
 import "../styles/side-menu.css"
-import sidemenuData from './../assets/sidemenuData.js';
+import sidemenuData from '../assets/sidemenuData.js';
+import { Link } from 'react-router-dom';
 
 const SideMenuTab = (props) => {
     const tabInfo = props.sideMenuTabInfo;
     const currentTab = 'Battlefield 4';
     const [isMouseOver, setIsMouseOver] = useState(false);
+
+    const handleClick = () => {
+        if(tabInfo.name === 'Quit'){
+            props.handleQuit();
+        }
+    }
     return (
-        <a href='/'
+        <Link to='/'
             className={`${tabInfo.cName +  (tabInfo.name === currentTab ? ' w--current' : ' ')}`}
             onMouseOver={() => setIsMouseOver(true)}
             onMouseOut={() => setIsMouseOver(false)}
             style={{ backgroundImage: `url(${tabInfo.imgURL})`, opacity: `${isMouseOver? '1' : `${tabInfo.name === 'Battlefield 4' ? '0.8':'0.5'}`}`}}
+            onMouseDown={() => handleClick()}
         >
             <div
                 className='side-menu__popup '
@@ -21,15 +29,15 @@ const SideMenuTab = (props) => {
                     {tabInfo.name}
                 </div>
             </div>
-        </a>
+        </Link>
     );
 }
 
-const Sidemenu = () => {
+const Sidemenu = (props) => {
     return (
         <div className='side-menu__bar'>
             <div className='side-menu__tabs'>
-                {sidemenuData.map((d, index) => <SideMenuTab key={index} sideMenuTabInfo={d} />)}
+                {sidemenuData.map((d, index) => <SideMenuTab key={index} sideMenuTabInfo={d} handleQuit={props.handleQuit} />)}
             </div>
         </div>
     )

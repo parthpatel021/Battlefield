@@ -1,24 +1,37 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import React, { useState } from 'react'
 import "./styles/app.css"
-import { Route, Routes } from 'react-router-dom';
-import Sidemenu from './Components/SideMenu';
-import Invite from './Battlefield4/Invite';
-import B4Level from './Battlefield4/B4Level';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import BattlefieldPage from './Battlefield4/BattlefieldPage';
+import BattlePacks from './Battlefield4/BattlePacks';
 
 export const App = () => {
+    const navigate = useNavigate();
+    const [quit,setQuit] = useState(false);
+    const handleQuit = () => {
+        setQuit(true);
+    }
     return (
         <>
             <div className='container'>
                 <div className='bf4__bg' />
-                <img src='https://uploads-ssl.webflow.com/6013fff62154adaa4600f932/6038fcc47b02ee10043f39c3_soldier__BFemblem.png' className='soldier__bfemblem'/>
-                <B4Level /> 
-                <Sidemenu />
                 <Routes>
-                    <Route path='/' element={<BattlefieldPage />} />
+                    <Route path='/' element={<BattlefieldPage handleQuit={handleQuit} />} />
+                    <Route path='/battlepacks' element={<BattlePacks />} />
                 </Routes>
-                <Invite />
+
+                <div className='quit__wrapper' style={{display: `${quit ? 'flex' : 'none'}`}}>
+                    <div className='quit__options-w'>
+                        <div className='quit__text-w'>
+                            <div className='quit__text'>quit</div>
+                            <div className='quit__text-2'>Do you really want to quit?</div>
+                        </div>
+                        <div className='quit__buttons-w'>
+                            <div className='quit__button' onClick={() => setQuit(false)}>yes</div>
+                            <div className='quit__button quit__button--nomargin' onClick={() => setQuit(false)}>no</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

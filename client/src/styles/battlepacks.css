@@ -1,0 +1,47 @@
+.battlepacks {
+    background-size: auto, 320vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    padding-left: 12vh;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.battlepacks__content{
+    width: 127vh;
+    height: 100%;
+    position: relative;
+}
+
+/* --------------------------- Heading --------------------------------- */
+
+.battlepacks__heading-w {
+    width: 31vh;
+    background-color: rgba(16, 16, 16, .7);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vh;
+    display: flex;
+}
+
+.battlepacks__heading {
+    color: #fff;
+    letter-spacing: .06vh;
+    text-transform: uppercase;
+    font-family: Rajdhani, sans-serif;
+    font-size: 5vh;
+    font-weight: 600;
+    line-height: 6vh;
+}
+
+/* --------------------------- BattlePacks --------------------------------- */
+
+.battlepacks__battlepacks-w {
+    height: 31.5vh;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 4vh;
+}
+
