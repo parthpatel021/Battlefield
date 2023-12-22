@@ -1,35 +1,47 @@
-# BattleField4 - Soldier PageThe 
-Battlefield 4 Soldier Page is a comprehensive web application designed to provide players with a detailed overview of their in-game performance. This centralized hub offers the following key features:
+# Battlefield 4 Soldier Page
 
-* **Soldier-Level:** Quickly view your current soldier level to gauge your overall progress in the game.
-* **Wins:** Track your victories and assess your success in various game modes.
-* **Achievements:** Explore and showcase your earned achievements, highlighting your accomplishments in Battlefield 4.
-* **Most Used Weapons:** Gain insights into your preferred weapons, helping you optimize your loadout for future battles.
-* **Detailed Statistics:** Access in-depth statistics to analyze your performance across different aspects of the game, allowing for strategic improvement.
+Welcome to the Battlefield 4 Soldier Page, a web application designed to provide players with a snapshot of their in-game performance.
 
-## Setting up Locally
-1. Clone this repository to your local environment
+## Features
 
-```bash
-git clone https://github.com/parthpatel021/Battlefield.git
-```
+- **Soldier-Level:** View your current soldier level.
+- **Wins:** Track victories in various game modes.
+- **Achievements:** Showcase earned achievements.
+- **Most Used Weapons:** Gain insights into preferred weapons.
+- **Detailed Statistics:** Access in-depth game performance stats.
 
-2. Install dependencies for the `server` as well as the `client`
-```bash
-npm install
-```
+## Getting Started Locally
 
-4. add a `.env` file<br />
-  - in `client` directory
-```bash
-REACT_APP_BASE_URL=http://localhost:8080/
-```
-  - in the `server` directory
-```bash
-MONGO_URL=YOUR_MONGODB_URL
-```
+1. Clone this repository:
 
-5. To run it locally execute the following command in the `client` as well as `server` directory
-```bash
-npm start
-```
+    ```bash
+    git clone https://github.com/parthpatel021/Battlefield.git
+    ```
+
+2. Install dependencies for both the `server` and the `client`:
+
+    ```bash
+    npm install
+    ```
+
+3. Add a `.env` file:
+
+    - In `client` directory:
+
+        ```bash
+        REACT_APP_BASE_URL=http://localhost:8080/
+        ```
+
+    - In `server` directory:
+
+        ```bash
+        MONGO_URL=YOUR_MONGODB_URL
+        ```
+
+4. To run it locally, execute the following command in both `client` and `server` directories:
+
+    ```bash
+    npm start
+    ```
+
+Explore your Battlefield 4 journey with the Soldier Page!
