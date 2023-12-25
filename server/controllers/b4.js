@@ -1,4 +1,5 @@
 import soldierModel from "../models/b4/soldierModel.js"
+import storeModel from "../models/b4/storeModel.js";
 
 // Controller soldier - info (B4)
 export const getSoldierInfoController = async (req, res) => {
@@ -40,3 +41,21 @@ export const addSoldierInfoContaroller = async (req,res) => {
 
     }
 };
+
+export const getStoreInfoController = async (req,res) => {
+    try {
+        var storeInfo = await storeModel.find({});
+        res.status(200).send({
+            success: true,
+            message: 'BattleField 4 - Store Info',
+            storeInfo
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Erorr in getting StoreInfo",
+            error: error.message,
+        });
+    }
+}

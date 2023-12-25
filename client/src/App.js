@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react'
 import "./styles/app.css"
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import BattlefieldPage from './Battlefield4/BattlefieldPage';
 import BattlePacks from './Battlefield4/BattlePacks';
 
 export const App = () => {
-    const navigate = useNavigate();
     const [quit,setQuit] = useState(false);
     const handleQuit = () => {
         setQuit(true);
@@ -17,6 +16,7 @@ export const App = () => {
                 <div className='bf4__bg' />
                 <Routes>
                     <Route path='/' element={<BattlefieldPage handleQuit={handleQuit} />} />
+                    {/* <Route path='/store' element={<BattleFieldStore />} /> */}
                     <Route path='/battlepacks' element={<BattlePacks />} />
                 </Routes>
 

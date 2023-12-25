@@ -1,0 +1,82 @@
+.store{
+    margin-top: 10vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.store-menu-w {
+    width: 37vh;
+    border-top: 1px rgba(255, 255, 255, .1);
+    margin-right: 4vh;
+}
+
+.store-menu {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px rgba(255, 255, 255, .1);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.7vh;
+    padding-right: 1.7vh;
+    text-decoration: none;
+    display: flex;
+}
+
+.store-menu-h{
+    color: #fff;
+    letter-spacing: .07vh;
+    text-transform: uppercase;
+    margin-top: 1.3vh;
+    margin-bottom: 1.3vh;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.4vh;
+    font-weight: 600;
+    line-height: 1.8vh;
+    text-decoration: none;
+}
+
+.store__bfv {
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 0.8vh;
+    display: flex;
+    position: relative;
+}
+
+.store__bfv-image {
+    z-index: 1;
+    height: 31vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.store__bfv-info-w {
+    z-index: 5;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+    right: 2vh;
+    overflow: hidden;
+}
+
+.store__bfv-title {
+    color: #fff;
+    letter-spacing: .08vh;
+    text-transform: uppercase;
+    font-family: Rajdhani, sans-serif;
+    font-size: 2.2vh;
+    font-weight: 500;
+    line-height: 2.3vh;
+}
+
+.store__bfv-bar {
+    z-index: 8;
+    height: 0.875vh;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1vh;
+    left: 0;
+    right: 0;
+}
