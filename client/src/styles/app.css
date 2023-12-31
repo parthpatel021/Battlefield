@@ -34,12 +34,6 @@ a {
 }
 
 
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-}
-
 .soldier__bfemblem {
     z-index: 1;
     width: 38vh;
@@ -118,7 +112,7 @@ img {
 
 /* --------------------------- Quit --------------------------------------------------- */
 
-.quit__wrapper {
+.quit-w {
     z-index: 999999999;
     background-color: rgba(16, 16, 16, .9);
     flex-direction: row;
@@ -132,11 +126,11 @@ img {
     right: 0%;
 }
 
-.quit__text-w {
+.quit-options {
     margin-bottom: 5vh;
 }
 
-.quit__text {
+.quit-text-w {
     color: #fff;
     text-align: center;
     letter-spacing: .1vh;
@@ -148,7 +142,7 @@ img {
     line-height: 3vh;
 }
 
-.quit__text-2 {
+.quit-text-2 {
     color: rgba(255, 255, 255, .8);
     text-align: center;
     letter-spacing: .15vh;
@@ -159,11 +153,11 @@ img {
     line-height: 2vh;
 }
 
-.quit__buttons-w {
+.quit-buttons {
     display: flex;
 }
 
-.quit__button {
+.quit-button{
     color: #fff;
     text-align: center;
     letter-spacing: .1vh;
@@ -177,11 +171,11 @@ img {
     line-height: 2vh;
     transition: all .1s;
 }
-.quit__button.quit__button--nomargin {
+.quit-button.quit-button-right {
     margin-right: 0;
 }
 
-.quit__button:hover {
+.quit-button:hover {
     background-color: #fff;
     color: rgb(16, 16, 16);
 }
